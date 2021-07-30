@@ -34,6 +34,10 @@ mongoose
     console.log("Database connected");
   });
 
+  app.get('/', (req,res) => {
+    res.send('Ecommerce Backend API')
+  })
+
 app.use(cors());
 app.use(express.json());
 app.use("/public", express.static(path.join(__dirname, "uploads")));

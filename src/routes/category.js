@@ -28,8 +28,8 @@ const upload = multer({ storage });
 
 router.post(
   "/category/create",
-  requireSignin,
-  superAdminMiddleware,
+   requireSignin,
+  // superAdminMiddleware,
   upload.single("categoryImage"),
   addCategory
 );
